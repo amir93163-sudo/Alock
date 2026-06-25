@@ -1,4 +1,4 @@
-const API_URL = "https://alock.onrender.com/api";gi
+const API_URL = "https://alock.onrender.com/api";
 
 
 async function sendOtp(data) {
