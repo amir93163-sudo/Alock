@@ -167,17 +167,6 @@ Receive Price Quote
 
 ---
 
-# 📸 Screenshots
-
-You can add screenshots here later.
-
-Example:
-
-```
-/screenshots/homepage.png
-/screenshots/coupon.png
-/screenshots/email.png
-```
 
 ---
 
