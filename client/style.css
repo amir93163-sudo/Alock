@@ -594,3 +594,169 @@ footer{
   }
 
 }
+/* ==========================
+   Mobile Responsive
+========================== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .logo {
+    max-width: 180px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 30px 20px 60px;
+  }
+
+  .hero-content {
+    padding: 40px 10px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .call-btn,
+  .whatsapp-btn,
+  .service-btn,
+  .discount-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .services {
+    padding: 50px 20px;
+  }
+
+  .services h2 {
+    font-size: 30px;
+  }
+
+  .discount-section {
+    padding: 20px 0;
+  }
+
+  .discount-card {
+    width: 100%;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .discount-card h2 {
+    font-size: 26px;
+  }
+
+  .discount-card p {
+    font-size: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .about,
+  .areas,
+  .contact {
+    padding: 45px 20px;
+    text-align: center;
+  }
+
+  .about h2,
+  .areas h2,
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .about ul {
+    padding: 0;
+  }
+
+  .big-phone {
+    font-size: 34px;
+    word-break: break-word;
+  }
+
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 95%;
+    padding: 25px 18px;
+  }
+
+  .modal-content h2 {
+    font-size: 25px;
+  }
+
+  .modal-content input,
+  .modal-content button {
+    font-size: 16px;
+  }
+
+  #couponCode {
+    font-size: 28px;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .discount-card h2 {
+    font-size: 23px;
+  }
+
+  .big-phone {
+    font-size: 28px;
+  }
+}
