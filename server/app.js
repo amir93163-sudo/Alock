@@ -15,16 +15,15 @@ app.use(cors({
     origin: [
         "http://127.0.0.1:5500",
         "http://localhost:5500",
-        "https://reliable-pothos-e937c6.netlify.app/"
+        "https://reliable-pothos-e937c6.netlify.app"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
-
+app.use("/api/auth", authRoutes);
 // Routes
 app.use("/api/customers", customerRoutes);
-app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
