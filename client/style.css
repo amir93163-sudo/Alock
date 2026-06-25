@@ -760,84 +760,106 @@ footer{
     font-size: 28px;
   }
 }
-/* ===== Final mobile fix for all service pages ===== */
+/* ===== Service pages responsive fix ===== */
 
+.service-layout {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.service-layout .service-image,
+.service-layout .service-text {
+  flex: 1;
+}
+
+.service-layout .service-image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 20px;
+  border: 2px solid #d4af37;
+}
+
+.service-layout .service-text {
+  max-width: 520px;
+}
+
+.service-layout .service-text h2 {
+  color: #d4af37;
+  font-size: 36px;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.service-layout .service-text p,
+.service-layout .service-text li {
+  color: white;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.service-layout .service-text ul {
+  padding-right: 22px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-
-  .service-row,
-  .service-section,
-  .service-block {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 25px !important;
+  .service-layout {
+    flex-direction: column;
+    gap: 28px;
+    margin: 45px auto;
+    padding: 0 18px;
+    text-align: center;
   }
 
-  .service-row > *,
-  .service-section > *,
-  .service-block > * {
-    width: 100% !important;
-    max-width: 360px !important;
-    flex: none !important;
+  .service-layout .service-image,
+  .service-layout .service-text {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
   }
 
-  .service-text,
-  .service-info,
-  .service-content {
-    width: 100% !important;
-    max-width: 360px !important;
-    margin: 0 auto !important;
-    padding: 0 18px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
+  .service-layout .service-image {
+    order: 1;
   }
 
-  .service-image {
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 25px auto !important;
-    display: block !important;
-    text-align: center !important;
+  .service-layout .service-text {
+    order: 2;
+    max-width: 390px;
+    margin: 0 auto;
   }
 
-  .service-image img,
-  .service-row img,
-  .service-section img,
-  .service-block img {
-    width: 100% !important;
-    max-width: 300px !important;
-    min-width: 240px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-    object-fit: cover !important;
+  .service-layout .service-image img {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+    margin: 0 auto;
   }
 
-  .service-content h1,
-  .service-content h2,
-  .service-text h1,
-  .service-text h2 {
-    font-size: 30px !important;
-    line-height: 1.25 !important;
-    text-align: center !important;
+  .service-layout .service-text h2 {
+    font-size: 30px;
+    text-align: center;
   }
 
-  .service-content p,
-  .service-content li,
-  .service-text p,
-  .service-text li {
-    font-size: 17px !important;
-    line-height: 1.8 !important;
-    text-align: center !important;
+  .service-layout .service-text p,
+  .service-layout .service-text li {
+    font-size: 17px;
+    line-height: 1.75;
+    text-align: center;
   }
 
-  .service-content ul,
-  .service-text ul {
-    padding: 0 !important;
-    margin: 20px auto !important;
-    list-style-position: inside !important;
+  .service-layout .service-text ul {
+    padding: 0;
+    margin: 18px auto;
+    list-style-position: inside;
   }
 }
