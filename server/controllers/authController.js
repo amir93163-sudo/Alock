@@ -51,23 +51,21 @@ const sendOtp = async (req, res) => {
                 error: emailError.message
             });
         }
-    }
 
-res.status(200).json({
-    success: true,
-    message: "OTP sent to your email.",
-    customerId: customer._id
-});
+        return res.status(200).json({
+            success: true,
+            message: "OTP sent to your email.",
+            customerId: customer._id
+        });
 
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
             message: "Server error",
             error: error.message
         });
     }
 };
-
 const verifyOtp = async (req, res) => {
     try {
         const { customerId, otpCode } = req.body;
