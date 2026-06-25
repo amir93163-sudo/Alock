@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alock | שירותי מנעולן מקצועיים</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="hero">
+
+  <nav>
+    <img src="images/logo.png" class="logo">
+    
+    <div class="nav-links">
+      <a href="#services">שירותים</a>
+      <a href="#about">אודות</a>
+      <a href="#contact">יצירת קשר</a>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <h1>שירותי מנעולן מקצועיים</h1>
+
+    <p>
+      פריצת רכבים • החלפת צילינדרים • מנעולים חכמים
+    </p>
+
+    <div class="buttons">
+      <a href="tel:0507447834" class="call-btn">
+        התקשר עכשיו
+      </a>
+
+      <a href="https://wa.me/972507447834" class="whatsapp-btn">
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+</header>
+
+<section id="services" class="services">
+
+  <h2>השירותים שלנו</h2>
+  <section class="discount-section">
+
+    <div class="discount-card">
+
+        <span class="discount-badge">🎁 מבצע מיוחד</span>
+
+        <h2>מועדון הלקוחות של ALock</h2>
+
+        <p>
+            הירשמו עכשיו וקבלו
+            <strong>20% הנחה</strong>
+            על כל השירותים
+        </p>
+
+        <a href="#" class="discount-btn" id="openDiscountModal">
+             קבלו את ההטבה
+        </a>
+
+    </div>
+
+</section>
+  <div class="cards">
+
+    <div class="card">
+      <h3>פריצת רכבים</h3>
+      <p>שירות מהיר ומקצועי לכל סוגי הרכבים</p>
+
+      <a href="car-lockout.html" class="service-btn">
+        למידע נוסף
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>מנעולים חכמים</h3>
+      <p>התקנה ותיקון מנעולים מתקדמים</p>
+
+      <a href="smart-locks.html" class="service-btn">
+        למידע נוסף
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>החלפת צילינדרים</h3>
+      <p>החלפה איכותית עם אחריות מלאה</p>
+
+      <a href="cylinder-replacement.html" class="service-btn">
+        למידע נוסף
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="about">
+
+  <h2>למה לבחור ב־Alock?</h2>
+
+  <ul>
+    <li>✔ זמינות 24/7</li>
+    <li>✔ שירות מהיר</li>
+    <li>✔ מחירים הוגנים</li>
+    <li>✔ אחריות מלאה</li>
+  </ul>
+
+</section>
+
+<section class="areas">
+
+  <h2>אזורי שירות</h2>
+
+  <p>מרכז • השפלה • השרון</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <h2>צריכים מנעולן?</h2>
+
+  <a href="tel:0507447834" class="big-phone">
+    050-744-7834
+  </a>
+
+</section>
+
+<footer>
+  <p>© 2026 Alock Locksmith</p>
+</footer>
+<div id="discountModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2>🎁 קבלו 20% הנחה</h2>
+
+        <div id="step1">
+
+            <input
+                type="text"
+                id="firstName"
+                placeholder="שם פרטי">
+
+            <input
+                type="text"
+                id="lastName"
+                placeholder="שם משפחה">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="אימייל">
+
+            <button id="sendOtpBtn">
+                שלח קוד אימות
+            </button>
+
+        </div>
+
+        <div id="step2" style="display:none;">
+
+            <input
+                type="text"
+                id="otpCode"
+                placeholder="קוד אימות">
+
+            <button id="verifyOtpBtn">
+                אמת קוד
+            </button>
+
+        </div>
+
+        <div id="step3" style="display:none;">
+
+            <h3>🎉 הקופון שלך מוכן!</h3>
+
+            <h1 id="couponCode"></h1>
+
+            <p>20% הנחה על כל השירותים</p>
+
+            <a
+                id="whatsappLink"
+                class="whatsapp-btn"
+                target="_blank">
+
+                קבל הצעת מחיר ב־WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="js/api.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/discount.js"></script>
+</body>
+</html>
