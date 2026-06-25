@@ -132,7 +132,7 @@ ${result.data.coupon.code}
 תודה!`;
 
         document.getElementById("whatsappLink").href =
-            `https://wa.me/972507447934?text=${encodeURIComponent(message)}`;
+            `https://wa.me/972507447834?text=${encodeURIComponent(message)}`;
 
     }
 
