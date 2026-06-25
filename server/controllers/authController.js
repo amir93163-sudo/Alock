@@ -35,13 +35,29 @@ const sendOtp = async (req, res) => {
             expiresAt
         });
 
-        await sendOtpEmail(email, otpCode);
+        try {
+            console.log("📧 Sending OTP email to:", email);
 
-        res.status(200).json({
-            success: true,
-            message: "OTP sent to your email.",
-            customerId: customer._id
-        });
+            await sendOtpEmail(email, otpCode);
+
+            console.log("✅ OTP email sent");
+        } catch (emailError) {
+            console.error("❌ Email sending failed:");
+            console.error(emailError.message);
+
+            return res.status(500).json({
+                success: false,
+                message: "Customer saved, but email sending failed",
+                error: emailError.message
+            });
+        }
+    }
+
+res.status(200).json({
+    success: true,
+    message: "OTP sent to your email.",
+    customerId: customer._id
+});
 
     } catch (error) {
         res.status(500).json({
