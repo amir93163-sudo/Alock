@@ -6,24 +6,18 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const customerRoutes = require("./routes/customerRoutes");
 const authRoutes = require("./routes/authRoutes");
+
 const app = express();
 
 connectDB();
 
-// Middlewares
-app.use(cors({
-    origin: [
-        "http://127.0.0.1:5500",
-        "http://localhost:5500",
-        "https://reliable-pothos-e937c6.netlify.app"
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
+app.options("*", cors());
 app.use(express.json());
-app.use("/api/auth", authRoutes);
-// Routes
+
 app.use("/api/customers", customerRoutes);
+app.use("/api/auth", authRoutes);
+
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
