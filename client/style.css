@@ -863,3 +863,48 @@ footer{
     list-style-position: inside;
   }
 }
+/* ===== Mobile contact buttons fix ===== */
+
+@media (max-width: 768px) {
+
+  .contact-box {
+    padding: 45px 18px;
+    text-align: center;
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .contact-buttons .call-btn,
+  .contact-buttons .whatsapp-btn,
+  .home-btn {
+    width: 100%;
+    max-width: 310px;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 14px 20px;
+
+    border-radius: 999px;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .back-home {
+    padding: 40px 18px 55px;
+    text-align: center;
+  }
+}
