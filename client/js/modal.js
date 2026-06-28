@@ -68,6 +68,10 @@ sendOtpBtn.addEventListener("click", async () => {
             email
 
         });
+        if (!result.success) {
+            alert(result.message || "שליחת הקוד נכשלה");
+            return;
+        }
 
         currentCustomerId = result.customerId;
 

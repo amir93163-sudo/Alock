@@ -16,15 +16,20 @@ const sendOtp = async (req, res) => {
             });
         }
 
-        let customer = await Customer.findOne({ email });
+        const existingCustomer = await Customer.findOne({ email });
 
-        if (!customer) {
-            customer = await Customer.create({
+            if (existingCustomer) {
+                return res.status(409).json({
+                    success: false,
+                    message: "הלקוח כבר קיים במערכת"
+                });
+            }
+
+            const customer = await Customer.create({
                 firstName,
                 lastName,
                 email
-            });
-        }
+        });
 
         const otpCode = generateOtp();
         const expiresAt = new Date(Date.now() + 10 * 60 * 1000);
